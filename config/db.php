@@ -145,37 +145,37 @@ return [
     ],
     'posts' => [
         [
-            'cover_image' => 'https://picsum.photos/400/200',
+            'cover_image' => 'https://picsum.photos/600/600',
             'title' => 'Learn Laravel',
             'body' => 'lorem ipsum dolor'
         ],
         [
-            'cover_image' => 'https://picsum.photos/400/200',
+            'cover_image' => 'https://picsum.photos/600/600',
             'title' => 'Learn Laravel',
             'body' => 'lorem ipsum dolor'
         ],
         [
-            'cover_image' => 'https://picsum.photos/400/200',
+            'cover_image' => 'https://picsum.photos/600/600',
             'title' => 'Learn Laravel',
             'body' => 'lorem ipsum dolor'
         ],
         [
-            'cover_image' => 'https://picsum.photos/400/200',
+            'cover_image' => 'https://picsum.photos/600/600',
             'title' => 'Learn Laravel',
             'body' => 'lorem ipsum dolor'
         ],
         [
-            'cover_image' => 'https://picsum.photos/400/200',
+            'cover_image' => 'https://picsum.photos/600/600',
             'title' => 'Learn Laravel',
             'body' => 'lorem ipsum dolor'
         ],
         [
-            'cover_image' => 'https://picsum.photos/400/200',
+            'cover_image' => 'https://picsum.photos/600/600',
             'title' => 'Learn Laravel',
             'body' => 'lorem ipsum dolor'
         ],
         [
-            'cover_image' => 'https://picsum.photos/400/200',
+            'cover_image' => 'https://picsum.photos/600/600',
             'title' => 'Learn Laravel',
             'body' => 'lorem ipsum dolor'
         ],

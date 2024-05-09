@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', function () {
-    return view('home');
-})->name('home');
+    return view('guests.home');
+})->name('guests.home');
 
 Route::get('/products', function () {
 
@@ -39,22 +39,43 @@ Route::get('/products', function () {
     $veryshort = $productsCollection->filter(fn ($product) => $product['tipo'] == 'cortissima');
 
 
-    $data = [
+    /* $data = [
         'products' => [
             'lunga' => $long,
             'corta' => $short,
             'cortissima' => $veryshort,
         ]
     ];
+ */
+
+    return view('guests.products.index', ['products' => $products]);
+})->name('guests.products.index');
 
 
-    return view('products', $data);
-})->name('products');
+Route::get('/products/{id}', function ($id) {
 
-Route::get('/blog', function () {
+
+    abort_unless($id >= 0 && $id < count(config('db.products')), 404);
+
+    $product = config('db.products')[$id];
+    //dd($product);
+    // TODO: handle the 404 case
+
+    return view('guests.products.show', compact('product'));
+})->name('guests.products.show');
+
+
+Route::get('/posts', function () {
 
 
     $posts = config('db.posts');
     // dd($posts);
-    return view('blog', compact('posts'));
-})->name('blog');
+    return view('guests.posts.index', compact('posts'));
+})->name('guests.posts.index');
+
+Route::get('/posts/{id}', function ($id) {
+
+    abort_unless($id >= 0 && $id < count(config('db.posts')), 404);
+    $post = config('db.posts')[$id];
+    return view('guests.posts.show', compact('post'));
+})->name('guests.posts.show');
